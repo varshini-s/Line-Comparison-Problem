@@ -15,7 +15,7 @@ public class LineComparision {
 		System.out.println("----------welcome to line comparision Computation problem----------");
 		
 		//variables
-		int x1=0,x2=0,x3=0,x4=0,y1=0,y2=0,y3=0,y4=0;
+		int x1=0,x2=0,x3=0,x4=0,y1=0,y2=0,y3=0,y4=0,lengthCompare;
 		Double lengthOfLine1,lengthOfLine2;
 		
 		System.out.println("Enter coordinates of point P1 for Line1");
@@ -38,13 +38,18 @@ public class LineComparision {
 		//Length computation
 		lengthOfLine1=LineLength(x1,y1,x2,y2);
 		lengthOfLine2=LineLength(x3,y3,x4,y4);
+		
+		lengthCompare=lengthOfLine1.compareTo(lengthOfLine2);
 
-		if(lengthOfLine1.equals(lengthOfLine2)) {
-			System.out.println("Lines are equal");
-			
+		if(lengthCompare>0) {
+			System.out.println("Line1 is greater than Line2");
+		}
+		else if(lengthCompare<0) {
+			System.out.println("Line2 is greater than Line1");
 		}
 		else {
-			System.out.println("Lines are not equal");
+			System.out.println("Line1 is equal to Line2");
+
 		}
  
 		
