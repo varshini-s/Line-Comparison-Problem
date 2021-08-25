@@ -38,6 +38,15 @@ public class LineComparision {
 		//Length computation
 		lengthOfLine1=LineLength(x1,y1,x2,y2);
 		lengthOfLine2=LineLength(x3,y3,x4,y4);
+
+		if(lengthOfLine1.equals(lengthOfLine2)) {
+			System.out.println("Lines are equal");
+			
+		}
+		else {
+			System.out.println("Lines are not equal");
+		}
+		
 		
 		lengthCompare=lengthOfLine1.compareTo(lengthOfLine2);
 
